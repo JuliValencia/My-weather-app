@@ -1,0 +1,61 @@
+body {
+  background: linear-gradient(#ffc4a3, #ff9a76);
+  font-family: "Comfortaa", cursive;
+}
+
+form {
+  position: relative;
+  margin: 20px;
+}
+
+li {
+  list-style: none;
+  color: #f1f6f5;
+}
+.content {
+  max-width: 800px;
+}
+.location {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-align: right;
+  font-weight: bold;
+  color: #f1f6f5;
+}
+.current-date-time {
+  margin: 10px;
+}
+.current-temperature {
+  color: #f1f6f5;
+  font-size: 100px;
+}
+.weather-icon {
+  font-size: 80px;
+  margin-left: -25px;
+}
+.current-weather {
+  color: #f1f6f5;
+  font-size: 25px;
+  font-weight: 200;
+}
+.current-low-high {
+  font-size: 20px;
+}
+.current-humidity-wind {
+  font-size: 18px;
+}
+.weather-forecast {
+  color: #f1f6f5;
+}
+.weather-forecast-icon {
+  font-size: 50px;
+}
+.day1,
+.day2,
+.day3,
+.day4,
+.day5 {
+  font-size: 20px;
+  font-weight: bold;
+}
