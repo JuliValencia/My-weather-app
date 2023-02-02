@@ -14,8 +14,52 @@
   </head>
   <body>
     <div class="container">
-      hello
-      <script src="src/app.js"></script>
+      <div class="weather-app">
+        <form id="search-city">
+          <input
+            type="search"
+            placeholder="Search City"
+            autocomplete="off"
+            autofocus="on"
+            id="city-input"
+          />
+          <input type="submit" value="Search" />
+        </form>
+        <section class="location">
+          <h1 id="city">Lokeren</h1>
+          <p class="current-date-time">date</p>
+        </section>
+
+        <div class="row">
+          <div class="col-3">
+            <ul class="current-low-high">
+              <li>L: 8°</li>
+              <li>H: 13°</li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <div class="current-temperature">
+              9°
+              <span class="weather-icon" id="icon"> ⛅️ </span>
+            </div>
+            <div class="current-weather" id="description">Partly Cloudy</div>
+          </div>
+          <div class="col-3">
+            <ul class="current-humidity-wind">
+              <li>Humidity: 88%</li>
+              <li>Wind: 19km/h</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
+    <small>
+      Coded by Juliana Valencia,
+      <a href="https://github.com/JuliValencia/My-weather-app" target="_blank"
+        >open-sourced on GitHub
+      </a>
+    </small>
+
+    <script src="src/app.js"></script>
   </body>
 </html>
