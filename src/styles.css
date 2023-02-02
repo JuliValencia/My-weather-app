@@ -2,10 +2,51 @@ body {
   font-family: "Klee One", cursive;
 }
 
+h1 {
+  color: aliceblue;
+  font-weight: bold;
+  font-size: 45px;
+  text-align: right;
+}
+
+p {
+  text-align: right;
+  color: aliceblue;
+  margin-bottom: 10px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  color: aliceblue;
+  font-size: 18px;
+}
+
 .weather-app {
   max-width: 650px;
   margin: 30px 0 auto;
   padding: 20px;
-  border: 2px solid #f6ad8b;
+  border: 2px solid #e6bb83;
   border-radius: 5px;
+  background: linear-gradient(to top, #e6b980 0%, #eacda3 100%);
+}
+
+.current-low-high {
+  text-align: center;
+}
+
+.current-temperature {
+  text-align: center;
+  color: aliceblue;
+}
+
+.current-humidity-wind {
+  text-align: left;
+}
+
+.current-weather {
+  color: aliceblue;
+  text-align: center;
 }
