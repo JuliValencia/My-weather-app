@@ -25,21 +25,25 @@ li {
 }
 
 .weather-app {
-  max-width: 650px;
+  max-width: 600px;
   margin: 30px 0 auto;
   padding: 20px;
   border: 2px solid #e6bb83;
   border-radius: 5px;
   background: linear-gradient(to top, #e6b980 0%, #eacda3 100%);
+  display: block;
 }
 
 .current-low-high {
-  text-align: center;
+  text-align: right;
 }
 
 .current-temperature {
   text-align: center;
   color: aliceblue;
+  font-size: 70px;
+  margin-right: 5px;
+  line-height: 1;
 }
 
 .current-humidity-wind {
@@ -49,4 +53,21 @@ li {
 .current-weather {
   color: aliceblue;
   text-align: center;
+}
+.current-temperature .units {
+  position: relative;
+  top: -35px;
+  font-size: 18px;
+}
+
+.weather-icon {
+  font-size: 50px;
+  position: relative;
+  top: -15px;
+  margin-left: -15px;
+}
+
+.current-weather {
+  font-size: 22px;
+  font-weight: bold;
 }
