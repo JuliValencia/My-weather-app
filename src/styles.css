@@ -21,7 +21,7 @@ ul {
 li {
   list-style: none;
   color: aliceblue;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .weather-app {
@@ -47,12 +47,15 @@ li {
 }
 
 .current-humidity-wind {
-  text-align: left;
+  text-align: right;
 }
 
 .current-weather {
   color: aliceblue;
   text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: capitalize;
 }
 .current-temperature .units {
   position: relative;
@@ -65,9 +68,4 @@ li {
   position: relative;
   top: -15px;
   margin-left: -15px;
-}
-
-.current-weather {
-  font-size: 22px;
-  font-weight: bold;
 }
