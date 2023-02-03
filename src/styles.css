@@ -32,9 +32,13 @@ li {
   padding: 10px 15px 20px;
   display: block;
   max-width: 600px;
-  border: 2px solid #e6bb83;
+  border: 2px solid #739aeb;
   border-radius: 5px;
-  background: linear-gradient(to top, #e6b980 0%, #eacda3 100%);
+  background: radial-gradient(
+    circle at 12.3% 19.3%,
+    rgb(85, 88, 218) 0%,
+    rgb(95, 209, 249) 100.2%
+  );
 }
 
 .current-low-high {
@@ -64,6 +68,7 @@ li {
   position: relative;
   top: -35px;
   font-size: 18px;
+  font-weight: bold;
 }
 
 .weather-icon {
