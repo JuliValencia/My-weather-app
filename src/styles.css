@@ -5,14 +5,18 @@ body {
 h1 {
   color: aliceblue;
   font-weight: bold;
-  font-size: 45px;
+  font-size: 35px;
   text-align: right;
+  padding: 5px 0;
+  margin: 5px 5px 0 0;
 }
 
 p {
   text-align: right;
   color: aliceblue;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
+  padding: 0 5px 10px;
+  font-size: 18px;
 }
 ul {
   margin: 0;
@@ -23,19 +27,18 @@ li {
   color: aliceblue;
   font-size: 16px;
 }
-
 .weather-app {
+  margin: 0;
+  padding: 10px 15px 20px;
+  display: block;
   max-width: 600px;
-  margin: 30px 0 auto;
-  padding: 20px;
   border: 2px solid #e6bb83;
   border-radius: 5px;
   background: linear-gradient(to top, #e6b980 0%, #eacda3 100%);
-  display: block;
 }
 
 .current-low-high {
-  text-align: right;
+  text-align: center;
 }
 
 .current-temperature {
@@ -47,7 +50,7 @@ li {
 }
 
 .current-humidity-wind {
-  text-align: right;
+  text-align: center;
 }
 
 .current-weather {
@@ -57,7 +60,7 @@ li {
   font-weight: bold;
   text-transform: capitalize;
 }
-.current-temperature .units {
+.units {
   position: relative;
   top: -35px;
   font-size: 18px;
