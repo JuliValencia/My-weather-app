@@ -24,20 +24,23 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
-          <div class="row">
-            <div class="col-6">
+  <div class="row">
+    <div class="col-sm-4">
               <form id="search-city">
                 <input
                   type="search"
+                  class="form-control"
                   placeholder="Search City"
                   autocomplete="off"
                   autofocus="on"
                   id="search-text-input"
                 />
-                <input type="submit" value="Search" />
-              </form>
-            </div>
-            <div class="col-6">
+    </div>
+    <div class="col-sm-2">
+       <input type="submit" value="Search"  class="btn btn-primary w-80"/>
+    </div>
+              
+    <div class="col-sm-6">
               <div class="location-date-time">
                 <h1>
                   <strong id="city">City</strong>,
@@ -45,8 +48,9 @@
                 </h1>
                 <p class="current-date-time" id="date">Friday, February 3</p>
               </div>
-            </div>
-          </div>
+  </div>
+</div>
+       
 
           <div class="row align-items-center">
             <div class="col-3">

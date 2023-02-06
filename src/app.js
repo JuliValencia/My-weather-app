@@ -57,8 +57,18 @@ function showTemperature(response) {
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
 }
-let apiKey = `485cb8bac1atfac9f3b46bfdodfc3a40`;
-let city = `Medellin`;
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 
-axios.get(apiUrl).then(showTemperature);
+function search(city) {
+  let apiKey = `485cb8bac1atfac9f3b46bfdodfc3a40`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showTemperature);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let searchInputElement = document.querySelector("#search-text-input");
+  search(searchInputElement.value);
+}
+
+let form = document.querySelector("#search-city");
+form.addEventListener("submit", handleSubmit);
