@@ -24,11 +24,30 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
-          <h1>
-            <strong id="city">City</strong>,
-            <strong id="country"> Country </strong>
-          </h1>
-          <p class="current-date-time" id="date">Friday, February 3</p>
+          <div class="row">
+            <div class="col-6">
+              <form id="search-city">
+                <input
+                  type="search"
+                  placeholder="Search City"
+                  autocomplete="off"
+                  autofocus="on"
+                  id="search-text-input"
+                />
+                <input type="submit" value="Search" />
+              </form>
+            </div>
+            <div class="col-6">
+              <div class="location-date-time">
+                <h1>
+                  <strong id="city">City</strong>,
+                  <strong id="country"> Country </strong>
+                </h1>
+                <p class="current-date-time" id="date">Friday, February 3</p>
+              </div>
+            </div>
+          </div>
+
           <div class="row align-items-center">
             <div class="col-3">
               <ul class="current-low-high">

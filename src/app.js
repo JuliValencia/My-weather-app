@@ -58,7 +58,7 @@ function showTemperature(response) {
   );
 }
 let apiKey = `485cb8bac1atfac9f3b46bfdodfc3a40`;
-let city = `Lokeren`;
+let city = `Medellin`;
 let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(showTemperature);
