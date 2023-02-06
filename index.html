@@ -24,8 +24,8 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
-  <div class="row">
-    <div class="col-sm-4">
+          <div class="row">
+            <div class="col-sm-4">
               <form id="search-city">
                 <input
                   type="search"
@@ -35,12 +35,19 @@
                   autofocus="on"
                   id="search-text-input"
                 />
-    </div>
-    <div class="col-sm-2">
-       <input type="submit" value="Search"  class="btn btn-primary w-80"/>
-    </div>
-              
-    <div class="col-sm-6">
+              </form>
+            </div>
+            <div class="col-sm-2">
+              <form id="search-button">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn btn-primary w-80"
+                />
+              </form>
+            </div>
+
+            <div class="col-sm-6">
               <div class="location-date-time">
                 <h1>
                   <strong id="city">City</strong>,
@@ -48,8 +55,8 @@
                 </h1>
                 <p class="current-date-time" id="date">Friday, February 3</p>
               </div>
-  </div>
-</div>
+            </div>
+          </div>
           <div class="row align-items-center">
             <div class="col-3">
               <ul class="current-low-high">
@@ -60,7 +67,10 @@
             <div class="col-6">
               <div class="current-temperature">
                 <strong id="current-temperature"></strong
-                ><span class="units" id="units"><a href = "#" id="celsius-link" class="active">°C</a> | <a href = "#" id="fahrenheit-link" >°F</a> </span>
+                ><span class="units" id="units"
+                  ><a href="#" id="celsius-link" class="active">°C</a> |
+                  <a href="#" id="fahrenheit-link">°F</a>
+                </span>
                 <span>
                   <img
                     src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
@@ -68,10 +78,8 @@
                     id="weather-icon"
                 /></span>
               </div>
-
               <div class="current-weather" id="description">Partly Cloudy</div>
             </div>
-
             <div class="col-3">
               <ul class="current-humidity-wind">
                 <li>Humidity: <span id="humidity"></span>%</li>
