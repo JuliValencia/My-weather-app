@@ -88,18 +88,21 @@ a {
 .current-temperature .active:hover {
   text-decoration: none;
 }
-
-.search-button {
-  padding: 11px 0 0 0px;
+.search-city {
+  margin: 0 auto;
 }
-div .col-md-4 {
-  padding: 10px 0 0 10px;
+.form-control {
+  width: 180px;
+  margin: 5px 5px;
+  padding: 5px 5px;
 }
-
-.btn-outline-info {
+.btn-outline-primary {
   border: none;
+  color: aliceblue;
+  position: relative;
 }
 
-.btn-outline-info:hover {
+.btn-outline-primary:hover {
+  color: #557ae3;
   background-color: aliceblue;
 }

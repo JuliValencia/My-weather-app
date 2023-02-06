@@ -90,13 +90,13 @@ function showCelsiusTemperature(event) {
 }
 let celsiusTemperature = null;
 
-let form = document.querySelector("#search-button");
-form.addEventListener("submit", handleSubmit);
-
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
+
+let form = document.querySelector("#search-city");
+form.addEventListener("submit", handleSubmit);
 
 search("Lokeren");
