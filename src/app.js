@@ -37,26 +37,50 @@ let months = [
 let month = months[now.getMonth()];
 currentDateTime.innerHTML = `${day}, ${month} ${date}, ${hours}:${minutes}`;
 
+function formatDay(time) {
+  let date = new Date(time * 1000);
+  let day = date.getDay();
+  let days = [
+    `Sunday`,
+    `Monday`,
+    `Tuesday`,
+    `Wednesday`,
+    `Thursday`,
+    `Friday`,
+    `Saturday`,
+  ];
+  return days[day];
+}
+
 function showForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
-  let days = [`Tuesday`, `Wednesday`, `Thursday`, `Friday`];
+
   let forecastHTML = `  <div class="row">`;
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      ` <div class="col-2">
-      <div class="weather-forecast-date">${day}</div>
-      <img
-        src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
-        alt=""
-        width="45"
-      />
-      <div class="weather-forecast-temperatures">
-        <span class="weather-forecast-temperature-low"> L:3° </span>
-        <span class="weather-forecast-temperature-high">H:8°</span>
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        ` <div class="col-2">
+    <div class="weather-forecast-date">${formatDay(forecastDay.time)}</div>
+    <img
+    src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+      forecastDay.condition.icon
+    }.png"
+    alt=""
+    width="45"
+    />
+    <div class="weather-forecast-temperatures">
+    <div class="weather-forecast-temperature-low"> L:${Math.round(
+      forecastDay.temperature.minimum
+    )}° </div>
+        <div class="weather-forecast-temperature-high">H:${Math.round(
+          forecastDay.temperature.maximum
+        )}°</div>
       </div>
     </div>`;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
@@ -64,10 +88,9 @@ function showForecast(response) {
 }
 
 function getForecast(city) {
-  console.log(city);
   let apiKey = `485cb8bac1atfac9f3b46bfdodfc3a40`;
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
-  console.log(apiUrl);
+
   axios.get(apiUrl).then(showForecast);
 }
 
