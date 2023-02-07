@@ -32,7 +32,7 @@ a {
 }
 
 .weather-app {
-  margin: 0 auto;
+  margin: 0;
   padding: 10px 15px 20px;
   display: block;
   max-width: 600px;
