@@ -37,6 +37,31 @@ let months = [
 let month = months[now.getMonth()];
 currentDateTime.innerHTML = `${day}, ${month} ${date}, ${hours}:${minutes}`;
 
+function showForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = [`Tuesday`, `Wednesday`, `Thursday`, `Friday`];
+  let forecastHTML = `  <div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` <div class="col-2">
+      <div class="weather-forecast-date">${day}</div>
+      <img
+        src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
+        alt=""
+        width="45"
+      />
+      <div class="weather-forecast-temperatures">
+        <span class="weather-forecast-temperature-low"> L:3° </span>
+        <span class="weather-forecast-temperature-high">H:8°</span>
+      </div>
+    </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showTemperature(response) {
   let cityElement = document.querySelector(`#city`);
   let countryElement = document.querySelector(`#country`);
@@ -100,3 +125,4 @@ let form = document.querySelector("#search-city");
 form.addEventListener("submit", handleSubmit);
 
 search("Lokeren");
+showForecast();
