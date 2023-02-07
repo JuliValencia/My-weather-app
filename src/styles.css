@@ -106,3 +106,25 @@ a {
   color: #557ae3;
   background-color: aliceblue;
 }
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: aliceblue;
+  font-weight: bold;
+}
+
+.weather-forecast-date {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.weather-forecast-temperatures {
+  font-size: 14px;
+  font-weight: bolder;
+  text-shadow: aliceblue;
+}
+
+.weather-forecast-temperature-low {
+  opacity: 0.6;
+}
