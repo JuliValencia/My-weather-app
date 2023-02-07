@@ -53,10 +53,14 @@ function formatDay(time) {
 }
 
 function showForecast(response) {
+  let lowElement = document.querySelector(`#temperature-low`);
+  let highElement = document.querySelector(`#temperature-high`);
+  lowElement.innerHTML = Math.round(response.data.daily[0].temperature.minimum);
+  highElement.innerHTML = Math.round(
+    response.data.daily[0].temperature.maximum
+  );
   let forecast = response.data.daily;
-
   let forecastElement = document.querySelector("#forecast");
-
   let forecastHTML = `  <div class="row">`;
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
@@ -82,7 +86,6 @@ function showForecast(response) {
     </div>`;
     }
   });
-
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
@@ -111,6 +114,7 @@ function showTemperature(response) {
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = response.data.temperature.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
+
   iconElement.setAttribute(
     "src",
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`

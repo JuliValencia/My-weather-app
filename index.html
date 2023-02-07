@@ -56,8 +56,12 @@
           <div class="row align-items-center">
             <div class="col-3">
               <ul class="current-low-high">
-                <li>L:8°</li>
-                <li>H:13°</li>
+                <li class="weather-forecast-temperature-low">
+                  L:<span id="temperature-low"></span>°
+                </li>
+                <li class="weather-forecast-temperature-high">
+                  H:<span id="temperature-high"></span>°
+                </li>
               </ul>
             </div>
             <div class="col-6">
@@ -65,7 +69,7 @@
                 <strong id="current-temperature"></strong
                 ><span class="units" id="units"
                   ><a href="#" id="celsius-link" class="active">°C</a> |
-                  <a href="#" id="fahrenheit-link">°F</a>
+                  <a href="#" id="fahrenheit-link" d>°F</a>
                 </span>
                 <span>
                   <img
