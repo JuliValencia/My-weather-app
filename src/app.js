@@ -37,7 +37,8 @@ let months = [
 let month = months[now.getMonth()];
 currentDateTime.innerHTML = `${day}, ${month} ${date}, ${hours}:${minutes}`;
 
-function showForecast() {
+function showForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let days = [`Tuesday`, `Wednesday`, `Thursday`, `Friday`];
   let forecastHTML = `  <div class="row">`;
@@ -62,6 +63,14 @@ function showForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
+function getForecast(city) {
+  console.log(city);
+  let apiKey = `485cb8bac1atfac9f3b46bfdodfc3a40`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(showForecast);
+}
+
 function showTemperature(response) {
   let cityElement = document.querySelector(`#city`);
   let countryElement = document.querySelector(`#country`);
@@ -83,6 +92,7 @@ function showTemperature(response) {
     "src",
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
+  getForecast(response.data.city);
 }
 
 function search(city) {
@@ -125,4 +135,3 @@ let form = document.querySelector("#search-city");
 form.addEventListener("submit", handleSubmit);
 
 search("Lokeren");
-showForecast();
