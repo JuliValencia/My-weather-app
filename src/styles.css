@@ -139,3 +139,72 @@ hr {
 .weather-forecast-temperature-low {
   opacity: 0.6;
 }
+
+@media (max-width: 960px) {
+  li {
+    list-style: none;
+    color: aliceblue;
+    font-size: 11px;
+  }
+
+  .location-date-time h1 {
+    font-size: 20px;
+  }
+  .location-date-time p {
+    font-size: 12px;
+  }
+  .form-control {
+    width: 160px;
+    margin: 2px 2px;
+    padding: 2px 2px;
+    float: left;
+  }
+  .btn-outline-primary {
+    border: none;
+    color: aliceblue;
+    float: left;
+    margin-top: 2px;
+  }
+
+  .current-temperature {
+    text-align: center;
+    color: aliceblue;
+    font-size: 50px;
+    margin-right: 5px;
+    line-height: 1;
+  }
+  .units {
+    position: relative;
+    top: -25px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .weather-icon {
+    position: relative;
+    bottom: 2px;
+    margin-left: -27px;
+  }
+
+  .current-weather {
+    color: aliceblue;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+
+  .weather-forecast-date {
+    font-weight: bold;
+    font-size: 8px;
+  }
+
+  .weather-forecast-temperatures {
+    font-size: 9px;
+    font-weight: bolder;
+    text-shadow: aliceblue;
+  }
+  small {
+    font-size: 10px;
+  }
+}
